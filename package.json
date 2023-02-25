@@ -1,0 +1,19 @@
+{
+  "name": "t2s-pwa-vite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build --base speak-text",
+    "preview": "vite preview",
+    "db": "docker build -t carltonj2000/speak-text .",
+    "dr": "docker run -t -d --name st -p 8080:80 carltonj2000/speak-text",
+    "dk": "docker rm -f st",
+    "dp": "docker push carltonj2000/speak-text"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0"
+  }
+}
